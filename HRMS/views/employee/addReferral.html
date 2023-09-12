@@ -1,0 +1,418 @@
+<!--addRerral.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Human Resource Management System</title>
+    <link id='favicon' rel="shortcut icon" href="../../resource/images/icon.png" type="image/x-png">
+    <link href="../../resource/images/icon.png" rel="icon">
+    <!-- Bootstrap -->
+    <link href="../../resource/css/bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../resource/css/font-awesome.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../../resource/css/nprogress.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="../../resource/css/custom.css" rel="stylesheet">
+    <link href="../../resource/css/referral.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+
+        <style>
+   
+
+            /*.container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }*/
+        
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #007BFF;
+            }
+        
+            .candidate-list {
+                list-style-type: none;
+                padding: 0;
+            }
+        
+            .candidate-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                background-color: #f9f9f9;
+            }
+        
+            .candidate-info {
+                flex-grow: 1;
+            }
+        
+            .candidate-actions {
+                display: flex;
+                align-items: center;
+            }
+        
+            .accept-button, .reject-button {
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+        
+            .accept-button {
+                background-color: #5cb85c;
+                color: #fff;
+                margin-right: 10px;
+            }
+        
+            .reject-button {
+                background-color: #d9534f;
+                color: #fff;
+            }
+        
+            .accept-button:hover {
+                background-color: #4aaf4a;
+            }
+        
+            .reject-button:hover {
+                background-color: #c9302c;
+            }
+        
+             /* Add CSS styles for the clear button */
+             .clear-button {
+                    background-color: #d9534f;
+                    color: #fff;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: background-color 0.3s ease;
+                    margin-left: 300px;
+                    margin-top: 100px;
+                }
+        
+                .clear-button:hover {
+                    background-color: #c9302c;
+                }
+        </style>
+
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+
+            <!-- side and top bar include -->
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="../admin/dashboard.html" class="site_title"><img src="../../resource/images/uct.jpg"
+                                width="30px" height="30px"
+                                style="margin-right: 2px;border-radius: 30px;" /><span>Uniconverge Tech!</span></a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="../../resource/images/img.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>Nenshri</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>General</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../admin/dashboard.html">Dashboard</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-edit"></i> Recruitment <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../employee/addReferral.html">My Referrals</a></li>
+                                        <li><a href="../admin/candidateHistory.html">Candidate History</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a><i class="fa fa-clone"></i>Notice <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../noticeBoard/sendNotice.html">Notice</a></li>
+                                        <li><a href="../noticeBoard/noticeBoard.html">Notice Board</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu_section">
+
+                            <ul class="nav side-menu">
+                                <li>
+                                    <h3>Organization</h3>
+                                    <a><i class="fa fa-laptop"></i>Our Employees Data<span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../organization/dashEmp.html">Employee Dashboard</a></li>
+                                        <li><a href="../organization/createEmp.html">Add Employee</a></li>
+                                        <li><a href="../organization/empHistory.html">Employee History</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="../../index.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="../../resource/images/uct.jpg" width="30px" height="30px"
+                                        style="margin-right: 2px;border-radius: 30px;" alt="">Uniconverge Tech
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="javascript:;"> Profile</a></li>
+                                    <li><a href="../../index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li role="presentation" class="dropdown">
+                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fa fa-calendar"></i>
+                                    <span class="badge bg-green"></span>
+                                </a>
+                                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="../../resource/images/img.png"
+                                                    alt="Profile Image" /></span>
+                                            <span>
+                                                <span>Uniconverge Tech</span>
+
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <div class="text-center">
+                                            <a href="../liveEvent/liveEvent.html">
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- /side and top bar include -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="container" style="max-width: 800px;
+                margin: 0 auto;
+                padding: 50px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                    <h1>Candidate Evaluation</h1>
+            
+                      <!-- Add a button to clear all data -->
+                      <button class="clear-button" onclick="clearAllData()">Clear All Data</button>
+            
+                    
+                    <div id="candidateList">
+                        <!-- Candidate data will be displayed here -->
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content include -->
+            <div class="footer" style="position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #e0e3ea;
+            padding-top: 25px;">
+            
+                <div class="pull-right">
+                    Human Resource Management System by <a href="#">Uniconverge Tech</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Retrieve the array of candidate data from local storage
+        let candidates = JSON.parse(localStorage.getItem('candidates')) || [];
+
+        // Display all candidate data on the page
+        const candidateList = document.getElementById('candidateList');
+
+        candidates.forEach((candidateData, index) => {
+            const candidateInfo = document.createElement('div');
+            candidateInfo.classList.add('candidate-item');
+            candidateInfo.dataset.candidateId = candidateData.candidateId; // Set the dataset attribute
+            candidateInfo.innerHTML = `
+                <div class="candidate-info">
+                    <h3>${candidateData.candidateName} (Candidate ID: ${candidateData.candidateId})</h3>
+                    <p>Email: ${candidateData.candidateEmail}</p>
+                    <p>Applied Position: ${candidateData.appliedPosition}</p>
+                    <p>Contact: ${candidateData.contact}</p>
+                </div>
+                <div class="candidate-actions">
+                    <button class="accept-button" onclick="makeDecision('Accepted', '${candidateData.candidateId}')">Accept</button>
+                    <button class="reject-button" onclick="makeDecision('Rejected', '${candidateData.candidateId}')">Reject</button>
+                </div>
+            `;
+            candidateList.appendChild(candidateInfo);
+        });
+
+        async function makeDecision(decision, candidateId) {
+            // Find the candidate in the array using their candidateId
+            const index = candidates.findIndex(candidate => candidate.candidateId === candidateId);
+
+            if (index !== -1) {
+                // Update the candidate data with the decision
+                candidates[index].decision = decision;
+
+                // Store the updated candidate data in local storage
+                localStorage.setItem('candidates', JSON.stringify(candidates));
+
+                // Remove the candidate from the list
+                const candidateInfo = document.querySelector(`[data-candidate-id="${candidateId}"]`);
+                if (candidateInfo) {
+                    candidateInfo.remove();
+                }
+
+                // If accepted, send data to API Gateway
+                if (decision === 'Accepted') {
+                    try {
+                        const response = await fetch('https://jhu9w2oz19.execute-api.ap-south-1.amazonaws.com/hrms/', {
+                            method: 'POST',
+                            body: JSON.stringify(candidates[index]), // Send candidate data to API Gateway
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                        });
+
+                        if (response.ok) {
+                            alert(`Candidate Accepted and Data Sent to DynamoDB`);
+                        } else {
+                            alert('Failed to send data to DynamoDB');
+                        }
+                    } catch (error) {
+                        console.error('Failed to send data to DynamoDB');
+                            // Remove the candidate from the list permanently due to the error
+                            candidates.splice(index, 1);
+                            localStorage.setItem('candidates', JSON.stringify(candidates));
+                    }
+                } else if (decision === 'Rejected') {
+                    // If rejected, remove the candidate from the list permanently
+                    candidates.splice(index, 1);
+                    localStorage.setItem('candidates', JSON.stringify(candidates));
+                }
+            } else {
+                console.error('Candidate not found');
+                alert('Candidate not found');
+            }
+        }
+
+        // Function to clear all candidate data from local storage and reload the page
+        function clearAllData() {
+            if (confirm('Are you sure you want to clear all data?')) {
+                // Clear all data from local storage
+                localStorage.removeItem('candidates');
+
+                // Reload the page to reflect the changes
+                location.reload();
+            }
+        }
+
+    </script>
+    <!-- jQuery -->
+    <script src="../../resource/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../resource/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../resource/js/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../../resource/js/nprogress.js"></script>
+    <!-- validator -->
+    <script src="../../resource/js/validator.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../../resource/js/custom.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

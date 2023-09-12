@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Candidate Evaluation</title>
+   
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #007BFF;
+    }
+
+    form {
+        text-align: left;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .file-input-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .decision-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .accept-button {
+        background-color: #5cb85c;
+    }
+
+    .reject-button {
+        background-color: #d9534f;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Candidate Evaluation</h1>
+        <form id="candidateForm" action="evaluate.html" method="POST">
+            <input type="hidden" id="candidateId" name="candidateId" value="">
+            
+            <label for="candidateName">Candidate Name:</label>
+            <input type="text" id="candidateName" name="candidateName" required>
+
+            <label for="appliedPosition">Applied Position:</label>
+            <input type="text" id="appliedPosition" name="appliedPosition" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="candidateEmail" name="candidateEmail" required>
+
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('candidateForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Generate a unique candidateId (you can use any method you prefer)
+            const candidateId = generateCandidateId();
+
+            // Extract other form data
+            const candidateName = document.getElementById('candidateName').value;
+            const appliedPosition = document.getElementById('appliedPosition').value;
+            const candidateEmail = document.getElementById('candidateEmail').value;
+            const contact = document.getElementById('contact').value;
+
+            // Create an object with candidate data including the generated candidateId
+            const candidateData = {
+                candidateId,
+                candidateName,
+                appliedPosition,
+                candidateEmail,
+                contact,
+            };
+
+            // Retrieve existing candidate data or initialize an empty array
+            let candidates = JSON.parse(localStorage.getItem('candidates')) || [];
+
+            // Add the new candidate data to the array
+            candidates.push(candidateData);
+
+            // Store the updated array in local storage
+            localStorage.setItem('candidates', JSON.stringify(candidates));
+
+            // Simulate a successful submission (replace with actual submission logic)
+            const successfulSubmission = true;
+
+            if (successfulSubmission) {
+                alert('Data sent successfully!');
+                this.reset(); // Clear the form fields after successful submission
+
+                // Redirect to index.html
+                window.location.href = 'index.html';
+            }
+        });
+
+        // Function to generate a unique candidateId (you can implement your logic here)
+        function generateCandidateId() {
+            // For simplicity, you can use a timestamp as the candidateId
+            const timestamp = Date.now();
+            return `${timestamp}`;
+        }
+    </script>
+</body>
+</html>

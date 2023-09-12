@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <title>Human Resource Management System</title>
+
+    <!-- Bootstrap -->
+    <link href="../../resource/css/bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../resource/css/font-awesome.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../../resource/css/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../../resource/css/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="../../resource/css/bootstrap-progressbar-3.3.4.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="../../resource/css/jqvmap.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="../../resource/css/daterangepicker.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="../../resource/css/custom.css" rel="stylesheet">
+
+    <link id='favicon' rel="shortcut icon" href="../../resource/images/icon.png" type="image/x-png">
+    <link href="../../resource/images/icon.png" rel="icon">
+
+    <link rel="stylesheet" href="../../resource/css/globals.css" />
+    <link rel="stylesheet" href="../../resource/css/styles.css" />
+    <link rel="stylesheet" href="../../resource/css/weather.css" />
+</head>
+
+<body class="nav-md"  onload="DefaultScreen()">
+<div class="container body">
+    <div class="main_container">
+
+        <!-- side and top bar include -->
+       
+<div class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="../admin/dashboard.html" class="site_title"><img src="../../resource/images/uct.jpg" width="30px" height="30px" style="margin-right: 2px;border-radius: 30px;"/><span>Uniconverge Tech!</span></a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- menu profile quick info -->
+        <div class="profile clearfix">
+            <div class="profile_pic">
+                <img src="../../resource/images/img.png" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Nenshri</h2>
+            </div>
+        </div>
+        <!-- /menu profile quick info -->
+
+        <br />
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                    <li>
+                        <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="../admin/dashboard.html">Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-edit"></i> Recruitment <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="../employee/addReferral.html">My Referrals</a></li>
+                            <li><a href="../admin/candidateHistory.html">Candidate History</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a><i class="fa fa-clone"></i>Notice <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="../noticeBoard/sendNotice.html">Notice</a></li>
+                            <li><a href="../noticeBoard/noticeBoard.html">Notice Board</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_section">
+
+                <ul class="nav side-menu">
+                    <li><h3>Organization</h3>
+                        <a><i class="fa fa-laptop"></i>Our Employees Data<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="../organization/dashEmp.html">Employee Dashboard</a></li>
+                            <li><a href="../organization/createEmp.html">Add Employee</a></li>
+                            <li><a href="../organization/empHistory.html">Employee History</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /sidebar menu -->
+
+        <!-- /menu footer buttons -->
+        <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="../../index.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- /menu footer buttons -->
+    </div>
+</div>
+
+<!-- top navigation -->
+<div class="top_nav">
+    <div class="nav_menu">
+        <nav>
+            <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="../../resource/images/uct.jpg" width="30px" height="30px" style="margin-right: 2px;border-radius: 30px;" alt="">Uniconverge Tech
+                        <span class=" fa fa-angle-down"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                        <li><a href="javascript:;"> Profile</a></li>
+                        <li><a href="../../index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-calendar"></i>
+                        <span class="badge bg-green"><?=$_SESSION["event"]?></span>
+                    </a>
+                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+
+                       
+                        <li>
+                            <a>
+                                <span class="image"><img src="../../resource/images/img.png"  alt="Profile Image" /></span>
+                                <span>
+                                  <span>Uniconverge Tech</span>
+                                 <!-- <span class="time"><?=$event['event_time']?></span>
+                                </span>-->
+                                <!--<span class="message">
+                                  <?=$event['subject']?>
+                               </span>-->
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <div class="text-center">
+                                <a href="../liveEvent/liveEvent.html">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- /top navigation -->
+
+        <!-- /side and top bar include -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <!-- top tiles -->
+           
+            <!-- /top tiles -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="input-group" style="float: right;">
+                        <div class="box1">
+                            <input id="search"  type="search" placeholder="Search" aria-label="Search" >
+                            <button type="search">Search</button>
+                        </div>
+                    </div>
+                        
+                        <!-- new code start -->
+                        <div class="frame">
+                            <div class="div">
+                              <div class="job-statistics">
+                                <div class="overlap">
+                                  <div class="overall-sales">
+                                    <div class="group">
+                                      <div class="div-wrapper"><div class="text-wrapper">This Month</div></div>
+                                      <div class="group-2"><div class="text-wrapper-2">Job Statistics</div></div>
+                                      <div class="group-3">
+                                        <div class="text-wrapper-3">100</div>
+                                        <img
+                                          class="line"
+                                          src="https://generation-sessions.s3.amazonaws.com/dbd8df985e7e305791768e6738dba004/img/line-18.svg"
+                                        />
+                                      </div>
+                                      <div class="group-4">
+                                        <div class="text-wrapper-4">80</div>
+                                        <img
+                                          class="img"
+                                          src="https://generation-sessions.s3.amazonaws.com/dbd8df985e7e305791768e6738dba004/img/line-18-4.svg"
+                                        />
+                                      </div>
+                                      <div class="group-5">
+                                        <div class="text-wrapper-4">60</div>
+                                        <img
+                                          class="line"
+                                          src="https://generation-sessions.s3.amazonaws.com/dbd8df985e7e305791768e6738dba004/img/line-18-3.svg"
+                                        />
+                                      </div>
+                                      <div class="group-6">
+                                        <div class="text-wrapper-4">40</div>
+                                        <img
+                                          class="line"
+                                          src="https://generation-sessions.s3.amazonaws.com/dbd8df985e7e305791768e6738dba004/img/line-18-2.svg"
+                                        />
+                                      </div>
+                                      <div class="group-7">
+                                        <div class="text-wrapper-5">20</div>
+                                        <img
+                                          class="line"
+                                          src="https://generation-sessions.s3.amazonaws.com/dbd8df985e7e305791768e6738dba004/img/line-18-1.svg"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="group-8">
+                                    <div class="text-wrapper-6">Jan</div>
+                                    <div class="text-wrapper-7">Feb</div>
+                                    <div class="text-wrapper-8">Mar</div>
+                                    <div class="text-wrapper-9">Apr</div>
+                                    <div class="text-wrapper-10">May</div>
+                                    <div class="text-wrapper-11">Jun</div>
+                                    <div class="text-wrapper-12">Jul</div>
+                                    <div class="text-wrapper-13">Aug</div>
+                                    <div class="text-wrapper-14">Sep</div>
+                                    <div class="text-wrapper-15">Oct</div>
+                                    <div class="text-wrapper-16">Nov</div>
+                                    <div class="text-wrapper-17">Dec</div>
+                                    <div class="overlap-group"><div class="rectangle"></div></div>
+                                    <div class="rectangle-wrapper"><div class="rectangle-2"></div></div>
+                                    <div class="overlap-2"><div class="rectangle-3"></div></div>
+                                    <div class="overlap-3">
+                                      <div class="rectangle-4"></div>
+                                      <div class="rectangle-5"></div>
+                                    </div>
+                                    <div class="overlap-4"><div class="rectangle-6"></div></div>
+                                    <div class="overlap-5"><div class="rectangle-7"></div></div>
+                                    <div class="overlap-6"><div class="rectangle-8"></div></div>
+                                    <div class="overlap-7"><div class="rectangle-9"></div></div>
+                                    <div class="overlap-8"><div class="rectangle-10"></div></div>
+                                    <div class="overlap-9"><div class="rectangle-11"></div></div>
+                                    <div class="overlap-10"><div class="rectangle-12"></div></div>
+                                    <div class="overlap-11"><div class="rectangle-13"></div></div>
+                                  </div>
+                                  <div class="div-2">
+                                    <div class="rectangle-14"></div>
+                                    <div class="text-wrapper-18">Job View</div>
+                                  </div>
+                                  <div class="div-3">
+                                    <div class="rectangle-15"></div>
+                                    <div class="text-wrapper-18">Job Applied</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <img
+                                class="total-employees"
+                                src="https://generation-sessions.s3.amazonaws.com/dbd8df985e7e305791768e6738dba004/img/total-employees@2x.png"
+                              />
+                              <div class="frame-wrapper">
+                                <div class="div-4">
+                                  <img
+                                    class="bx-trending-up"
+                                    src="https://generation-sessions.s3.amazonaws.com/dbd8df985e7e305791768e6738dba004/img/bx-trending-up-1.svg"
+                                  />
+                                  <div class="text-wrapper-19">22.0%</div>
+                                </div>
+                              </div>
+                              <img
+                                class="job-view"
+                                src="https://generation-sessions.s3.amazonaws.com/dbd8df985e7e305791768e6738dba004/img/job-view@2x.png"
+                              />
+                              <div class="overlap-12">
+                                <div class="div-5">
+                                  <img
+                                    class="bx-trending-up-2"
+                                    src="https://generation-sessions.s3.amazonaws.com/dbd8df985e7e305791768e6738dba004/img/bx-trending-up.svg"
+                                  />
+                                  <div class="text-wrapper-20">7.0%</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                       <!-- new code end  -->
+
+                       
+                    
+                </div>
+
+            </div>
+            <br />
+
+            <div class="row">
+
+
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="x_panel tile fixed_height_320">
+                        <div class="x_title">
+                            <h2>App Versions</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Settings 1</a>
+                                        </li>
+                                        <li><a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <h4>App Usage across versions</h4>
+                            <div class="widget_summary">
+                                <div class="w_left w_25">
+                                    <span>0.1.5.2</span>
+                                </div>
+                                <div class="w_center w_55">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w_right w_20">
+                                    <span>123k</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="widget_summary">
+                                <div class="w_left w_25">
+                                    <span>0.1.5.3</span>
+                                </div>
+                                <div class="w_center w_55">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w_right w_20">
+                                    <span>53k</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="widget_summary">
+                                <div class="w_left w_25">
+                                    <span>0.1.5.4</span>
+                                </div>
+                                <div class="w_center w_55">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w_right w_20">
+                                    <span>23k</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="widget_summary">
+                                <div class="w_left w_25">
+                                    <span>0.1.5.5</span>
+                                </div>
+                                <div class="w_center w_55">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w_right w_20">
+                                    <span>3k</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="widget_summary">
+                                <div class="w_left w_25">
+                                    <span>0.1.5.6</span>
+                                </div>
+                                <div class="w_center w_55">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w_right w_20">
+                                    <span>1k</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="x_panel tile fixed_height_320 overflow_hidden">
+                        <div class="x_title">
+                            <h2>Device Usage</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Settings 1</a>
+                                        </li>
+                                        <li><a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <table class="" style="width:100%">
+                                <tr>
+                                    <th style="width:37%;">
+                                        <p>Top 5</p>
+                                    </th>
+                                    <th>
+                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                            <p class="">Device</p>
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                            <p class="">Progress</p>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <canvas class="canvasDoughnut" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                                    </td>
+                                    <td>
+                                        <table class="tile_info">
+                                            <tr>
+                                                <td>
+                                                    <p><i class="fa fa-square blue"></i>IOS </p>
+                                                </td>
+                                                <td>30%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p><i class="fa fa-square green"></i>Android </p>
+                                                </td>
+                                                <td>10%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p><i class="fa fa-square purple"></i>Blackberry </p>
+                                                </td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p><i class="fa fa-square aero"></i>Symbian </p>
+                                                </td>
+                                                <td>15%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p><i class="fa fa-square red"></i>Others </p>
+                                                </td>
+                                                <td>30%</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="x_panel tile fixed_height_320">
+                        <div class="x_title">
+                            <h2>Quick Settings</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Settings 1</a>
+                                        </li>
+                                        <li><a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="dashboard-widget-content">
+                                <ul class="quick-list">
+                                    <li><i class="fa fa-calendar-o"></i><a href="#">Settings</a>
+                                    </li>
+                                    <li><i class="fa fa-bars"></i><a href="#">Subscription</a>
+                                    </li>
+                                    <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a> </li>
+                                    <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a>
+                                    </li>
+                                    <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a> </li>
+                                    <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a>
+                                    </li>
+                                    <li><i class="fa fa-area-chart"></i><a href="#">Logout</a>
+                                    </li>
+                                </ul>
+
+                                <div class="sidebar-widget">
+                                    <h4>Profile Completion</h4>
+                                    <canvas width="150" height="80" id="chart_gauge_01" class="" style="width: 160px; height: 100px;"></canvas>
+                                    <div class="goal-wrapper">
+                                        <span id="gauge-text" class="gauge-value pull-left">0</span>
+                                        <span class="gauge-value pull-left">%</span>
+                                        <span id="goal-text" class="goal-value pull-right">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>FAQ's </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Settings 1</a>
+                                        </li>
+                                        <li><a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="dashboard-widget-content">
+
+                                <ul class="list-unstyled timeline widget">
+                                    <li>
+                                        <div class="block">
+                                            <div class="block_content">
+                                                <h2 class="title">
+                                                    <a><bold>What is Uniconverge Technologies?</bold></a>
+                                                </h2>
+                                               
+                                                <p class="excerpt">Uniconverge Technologies is a private company that provides services and solutions for organizations around the world.Their services include: Workforce solutions, Recruitment, Technology, Consulting, Outsourcing.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="block">
+                                            <div class="block_content">
+                                                <h2 class="title">
+                                                    <a>Which technologies Uniconverge technologies is using to develop its products and solutions?</a>
+                                                </h2>
+                                               
+                                                <p class="excerpt">Microsoft Azure, Hazelcast, JavaScript, Wireless communication, Cloud computing, Mobility, Data analytics, Machine learning, Artificial intelligence, Embedded technologies. <br/> Technologies is an automation company that provides IoT and LoRaWAN solutions, digital transformation, and industrial automation. They also offer a range of IoT products and solutions for industrial and commercial applications.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="block">
+                                            <div class="block_content">
+                                                <h2 class="title">
+                                                    <a>Can we get Internship in Uniconverge Technologies?</a>
+                                                </h2>
+                                               
+                                                <p class="excerpt">Yes, ofcourse. It is providing valuable Internship in the field of Cloud computing and IOT(Internet Of Things).
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="block">
+                                            <div class="block_content">
+                                                <h2 class="title">
+                                                    <a>how to apply in uniconverge technologies internship program?</a>
+                                                </h2>
+                                               
+                                                <p class="excerpt">UniConverge Technologies has a step-by-step process for finding candidates, verifying their identity, and hiring them. Some internships at UniConverge Technologies include:
+                                                    Machine learning internships, where you would understand the company's products and services, help upgrade the company's machine learning course contents, and apply machine learning.
+                                                    Program management internships, where you would have a background in electronics.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-8 col-sm-8 col-xs-12">
+
+
+
+                    <div class="row">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Visitors location <small>geo-presentation</small></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Settings 1</a>
+                                                </li>
+                                                <li><a href="#">Settings 2</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <div class="dashboard-widget-content">
+                                        <div class="col-md-4 hidden-small">
+                                            <h2 class="line_30">125.7k Views from 60 countries</h2>
+
+                                            <table class="countries_list">
+                                                <tbody>
+                                                <tr>
+                                                    <td>United States</td>
+                                                    <td class="fs15 fw700 text-right">33%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>France</td>
+                                                    <td class="fs15 fw700 text-right">27%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Germany</td>
+                                                    <td class="fs15 fw700 text-right">16%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Spain</td>
+                                                    <td class="fs15 fw700 text-right">11%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Britain</td>
+                                                    <td class="fs15 fw700 text-right">10%</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div id="world-map-gdp" class="col-md-8 col-sm-12 col-xs-12" style="height:230px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+
+                        <!-- Start to do list -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>To Do List <small>Sample tasks</small></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Settings 1</a>
+                                                </li>
+                                                <li><a href="#">Settings 2</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+                                    <div class="">
+                                        <ul class="to_do">
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Schedule meeting with new client </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Create email address for new intern</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Arrange immediate meetings</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Recruitment of new Candidate</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Check the progress report of company </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Create Notice for today</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Add Employee and manage their profile updates</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Have IT fix the network printer</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <input type="checkbox" class="flat"> Granting the Employee Leave</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End to do list -->
+
+                        <!-- start of weather widget -->
+                        <div class="inline-d-flex mt-5">
+                            <h2 id="heading"><b>Today's Weather</b>
+                            <p id="inputContainer" style="float: right;">City: <input type="text" id="cityInput">
+                                <button type="button" onclick="GetInfo()">Search</button>
+                            </p></h2>
+                        
+                        </div>
+                        
+                        <div class = "icons1">
+                            <h2 id="cityName" style="text-align: center;">Delhi</h2>
+                            <p class="weather" id="day1"></p>
+                            <div class="image"><img src=" https://openweathermap.org/img/wn/10d@2x.png" class="imgClass" id="img1"></div>
+                            <p class="temp" id="temp">Loading...</p>
+                            <p class="humidity" id="humidity">Loading...</p>
+                            <p class="minValues" id="day1Min">Loading...</p>
+                            <p class="maxValues" id="day1Max">Loading...</p>
+                        </div>
+                        <div id = "weatherContainer">
+                            <div id="iconsContainer">    
+                                <div class = "icons">
+                                    <p class="weather" id="day2"></p>
+                                    <div class="image"><img src=" https://openweathermap.org/img/wn/10d@2x.png" class="imgClass" id="img2"></div>
+                                    <p class="minValues" id="day2Min">Loading...</p>
+                                    <p class="maxValues" id="day2Max">Loading...</p>
+                                </div>
+                                <div class = "icons">
+                                    <p class="weather" id="day3"></p>
+                                    <div class="image"><img src=" https://openweathermap.org/img/wn/10d@2x.png" class="imgClass" id="img3"></div>
+                                    <p class="minValues" id="day3Min">Loading...</p>
+                                    <p class="maxValues" id="day3Max">Loading...</p>
+                                </div>
+                                <div class = "icons">
+                                    <p class="weather" id="day4"></p>
+                                    <div class="image"><img src=" https://openweathermap.org/img/wn/10d@2x.png" class="imgClass" id="img4"></div>
+                                    <p class="minValues" id="day4Min">Loading...</p>
+                                    <p class="maxValues" id="day4Max">Loading...</p>
+                                </div>
+                                <div class = "icons">
+                                    <p class="weather" id="day5"></p>
+                                    <div class="image"><img src=" https://openweathermap.org/img/wn/10d@2x.png" class="imgClass" id="img5"></div>
+                                    <p class="minValues" id="day5Min">Loading...</p>
+                                    <p class="maxValues" id="day5Max">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+                                           
+                        <!-- end of weather widget -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content include -->
+        <footer>
+            <div class="pull-right">
+                Human Resource Management System by <a href="#">Uniconverge Tech</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content include -->
+    </div>
+</div>
+<!--weather-->
+<script src="../../resource/js/main.js"></script>
+<!-- jQuery -->
+<script src="../../resource/js/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../../resource/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../../resource/js/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../../resource/js/nprogress.js"></script>
+<!-- Chart.js -->
+<script src="../../resource/js/Chart.min.js"></script>
+<!-- gauge.js -->
+<script src="../../resource/js/gauge.min.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="../../resource/js/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="../../resource/js/icheck.min.js"></script>
+<!-- Skycons -->
+<script src="../../resource/js/skycons.js"></script>
+<!-- Flot -->
+<script src="../../resource/js/jquery.flot.js"></script>
+<script src="../../resource/js/jquery.flot.pie.js"></script>
+<script src="../../resource/js/jquery.flot.time.js"></script>
+<script src="../../resource/js/jquery.flot.stack.js"></script>
+<script src="../../resource/js/jquery.flot.resize.js"></script>
+<!-- Flot plugins -->
+<script src="../../resource/js/jquery.flot.orderBars.js"></script>
+<script src="../../resource/js/jquery.flot.spline.min.js"></script>
+<script src="../../resource/js/curvedLines.js"></script>
+<!-- DateJS -->
+<script src="../../resource/js/date.js"></script>
+<!-- JQVMap -->
+<script src="../../resource/js/jquery.vmap.min.js"></script>
+<script src="../../resource/js/jquery.vmap.world.js"></script>
+<script src="../../resource/js/jquery.vmap.sampledata.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="../../resource/js/moment.min.js"></script>
+<script src="../../resource/js/daterangepicker.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="../../resource/js/custom.min.js"></script>
+</body>
+</html>
+

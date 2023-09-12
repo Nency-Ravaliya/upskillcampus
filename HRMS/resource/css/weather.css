@@ -1,0 +1,85 @@
+
+#cityInput, #cityName, #inputContainer,button{
+    margin: 3px;
+    padding:2px;
+    text-align:center;
+    font-size:12px;
+    font-weight:bold;
+}
+
+#iconsContainer{
+    position: absolute;
+    top: 79%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    width: 250px;       
+    border-radius: 10px;
+    float: right;
+}
+#weatherContainer{
+    background-color: cadetblue;
+}
+
+.icons{
+    display: inline-bock;
+    background-color: rgba(83, 42, 216, 0.708);
+    color: white;
+    float: left;
+    height: 200px;
+    width: 98px;
+    margin: 10px;
+    border: 5px solid rgb(48, 47, 47);
+    border-radius: 10px;
+}
+.icons1{
+    display: inline-bock;
+    float: left;
+    margin-top: 48px;
+    height: 225px;
+    width: 150px;
+    border: 5px solid rgba(21, 154, 114, 0.584);
+    border-radius: 10px;
+    background-color: rgb(70, 91, 192);
+    color: white;
+}
+
+.image{
+    height: 60px;
+    width: 50%;
+    margin-left: 8px;
+}
+
+.imgClass{
+    height: 80px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.weather{
+    color: white;
+    padding: 3px 3px;
+    margin: 5px;
+    background-color: rgba(9, 88, 102, 0.808);
+    border-radius: 5px;
+    text-align: center;
+
+}
+.temp{
+    text-align: center;
+    margin-top: 6px;
+}
+.humidity{
+    text-align: center;
+    margin-top: 6px;
+}
+
+.minValues{
+    text-align: center;
+    margin-top: 6px;
+}
+
+.maxValues{
+    text-align: center;
+    margin-top: 8px;
+}

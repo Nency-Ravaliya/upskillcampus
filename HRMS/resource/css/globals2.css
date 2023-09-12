@@ -1,0 +1,29 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+@import url("https://fonts.googleapis.com/css?family=Inter:600");
+@font-face {
+  font-family: "Product Sans-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/63a03f64f2f3033b65ac384a/fonts/idealsans-book.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Product Sans-Bold";
+  src: url("https://anima-uploads.s3.amazonaws.com/596db24aa0dc3c000d9a4ed2/product-sans-bold.ttf") format("truetype");
+}

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Human Resource Management System</title>
+
+    <!-- Bootstrap -->
+    <link href="../../resource/css/bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../resource/css/font-awesome.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../../resource/css/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../../resource/css/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="../../resource/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../../resource/css/buttons.bootstrap.css" rel="stylesheet">
+    <link href="../../resource/css/fixedHeader.bootstrap.css" rel="stylesheet">
+    <link href="../../resource/css/responsive.bootstrap.css" rel="stylesheet">
+    <link href="../../resource/css/scroller.bootstrap.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="../../resource/css/custom.css" rel="stylesheet">
+    <link id='favicon' rel="shortcut icon" href="../../resource/images/icon.png" type="image/x-png">
+    <link href="../../resource/images/icon.png" rel="icon">
+</head>
+
+<body class="nav-md" onclick="myfunc()">
+    <div class="container body">
+        <div class="main_container">
+
+            <!-- side and top bar include -->
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="../admin/dashboard.html" class="site_title"><img src="../../resource/images/uct.jpg"
+                                width="30px" height="30px"
+                                style="margin-right: 2px;border-radius: 30px;" /><span>Uniconverge Tech!</span></a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="../../resource/images/img.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>Nenshri</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>General</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../admin/dashboard.html">Dashboard</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-edit"></i> Recruitment <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../employee/addReferral.html">My Referrals</a></li>
+                                        <li><a href="../admin/candidateHistory.html">Candidate History</a></li>
+                                        
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a><i class="fa fa-clone"></i>Notice <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../noticeBoard/sendNotice.html">Notice</a></li>
+                                        <li><a href="../noticeBoard/noticeBoard.html">Notice Board</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu_section">
+
+                            <ul class="nav side-menu">
+                                <li>
+                                    <h3>Organization</h3>
+                                    <a><i class="fa fa-laptop"></i>Our Employees Data<span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../organization/dashEmp.html">Employee Dashboard</a></li>
+                                        <li><a href="../organization/createEmp.html">Add Employee</a></li>
+                                        <li><a href="../organization/empHistory.html">Employee History</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="../../src/store/Logout.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="../../resource/images/uct.jpg" width="30px" height="30px"
+                                        style="margin-right: 2px;border-radius: 30px;" alt="">Uniconverge Tech
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="javascript:;"> Profile</a></li>
+                                    <li><a href="../../src/store/Logout.html"><i class="fa fa-sign-out pull-right"></i>
+                                            Log Out</a></li>
+                                </ul>
+                            </li>
+
+                            <li role="presentation" class="dropdown">
+                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fa fa-calendar"></i>
+                                    <span class="badge bg-green">
+                                        <?=$_SESSION["event"]?>
+                                    </span>
+                                </a>
+                                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="../../resource/images/img.png"
+                                                    alt="Profile Image" /></span>
+                                            <span>
+                                                <span>Uniconverge Tech</span>
+
+                                    <li>
+                                        <div class="text-center">
+                                            <a href="../liveEvent/liveEvent.php">
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- /side and top bar include -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="">
+
+                    <div class="page-title">
+                        <div class="title_left">
+                            <h3>Notice <small>Board</small></h3>
+                        </div>
+
+                        <div class="title_right">
+                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search for...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">Go!</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="row">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Manage <small>Notice</small></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Settings 1</a>
+                                                </li>
+                                                <li><a href="#">Settings 2</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+                                    <table id="noticeTable" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Notice Subject</th>
+                                                <th>Notice Date</th>
+                                                <th>Notice Time</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Orientation Program</td>
+                                                <td>31-09-23</td>
+                                                <td>4.30</td>
+                                                <td>Introduction of new candidates</td>
+                                            </tr>
+                                            <!-- JavaScript code will populate the table -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content include -->
+            <div class="footer" style="position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #e0e3ea;
+            padding-top: 25px;">
+
+                <div class="pull-right">
+                    Human Resource Management System by <a href="#">Uniconverge Tech</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /footer content include -->
+        </div>
+    </div>
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const subject = params.get("subject");
+        const date = params.get("date");
+        const time = params.get("time");
+        const desc = params.get("desc");
+
+        // Create a new row in the table to display the notice data
+        const table = document.getElementById("noticeTable").getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow(table.rows.length);
+
+        // Insert notice data into the new row
+        const cell1 = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2);
+        const cell4 = newRow.insertCell(3);
+
+        cell1.innerHTML = subject;
+        cell2.innerHTML = date;
+        cell3.innerHTML = time;
+        cell4.innerHTML = desc;
+
+    function populateTable() {
+        const noticeRecords = JSON.parse(localStorage.getItem('noticeRecords')) || [];
+        const table = document.getElementById("noticeTable").getElementsByTagName('tbody')[0];
+
+        noticeRecords.foreach((entry)=>{
+            const newRow = table.insertRow(table.rows.length);
+            newRow.innerHTML =`
+                <td>${entry.noticeSubject}</td>
+                <td>${entry.noticeDate}</td>
+                <td>${entry.noticeTime}</td>
+                <td>${entry.noticeDesc}</td>
+            `;
+            table.appendChild(newRow);
+        });
+       
+     }
+     window.addEventListener('load', populateAcceptedTable);
+
+    </script>
+    <!-- jQuery -->
+    <script src="../../resource/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../resource/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../resource/js/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../../resource/js/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="../../resource/js/icheck.min.js"></script>
+    <!-- Datatables -->
+    <script src="../../resource/js/jquery.dataTables.min.js"></script>
+    <script src="../../resource/js/dataTables.bootstrap.min.js"></script>
+    <script src="../../resource/js/dataTables.buttons.min.js"></script>
+    <script src="../../resource/js/buttons.bootstrap.min.js"></script>
+    <script src="../../resource/js/buttons.flash.min.js"></script>
+    <script src="../../resource/js/buttons.html5.min.js"></script>
+    <script src="../../resource/js/buttons.print.min.js"></script>
+    <script src="../../resource/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../../resource/js/dataTables.keyTable.min.js"></script>
+    <script src="../../resource/js/dataTables.responsive.min.js"></script>
+    <script src="../../resource/js/responsive.bootstrap.js"></script>
+    <script src="../../resource/js/dataTables.scroller.min.js"></script>
+    <script src="../../resource/js/jszip.min.js"></script>
+    <script src="../../resource/js/pdfmake.min.js"></script>
+    <script src="../../resource/js/vfs_fonts.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../../resource/js/custom.min.js"></script>
+</body>
+
+</html>

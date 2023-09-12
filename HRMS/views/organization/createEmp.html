@@ -1,0 +1,338 @@
+<!--createEmp.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Human Resource Management System</title>
+
+    <!-- Bootstrap -->
+    <link href="../../resource/css/bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../resource/css/font-awesome.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../../resource/css/nprogress.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="../../resource/css/custom.css" rel="stylesheet">
+    <link id='favicon' rel="shortcut icon" href="../../resource/images/icon.png" type="image/x-png">
+    <link href="../../resource/images/icon.png" rel="icon">
+
+    <style>
+        .header {
+            background-color: #093c72e2;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        /* Center the container vertically and horizontally */
+        .container{
+            align-items: center;
+            justify-content: center;
+        }
+
+        /*Style the form */
+        form {
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style form fields, labels, and button */
+        label, input, textarea, button {
+            display: block;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #007bffde;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+
+        <!-- side and top bar include -->
+        
+<div class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="../admin/dashboard.html" class="site_title"><img src="../../resource/images/uct.jpg" width="30px" height="30px" style="margin-right: 2px;border-radius: 30px;"/><span>Uniconverge Tech!</span></a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- menu profile quick info -->
+        <div class="profile clearfix">
+            <div class="profile_pic">
+                <img src="../../resource/images/img.png" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Nenshri</h2>
+            </div>
+        </div>
+        <!-- /menu profile quick info -->
+
+        <br />
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                    <li>
+                        <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="../admin/dashboard.html">Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-edit"></i> Recruitment <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="../employee/addReferral.html">My Referrals</a></li>
+                            <li><a href="../admin/candidateHistory.html">Candidate History</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a><i class="fa fa-clone"></i>Notice <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="../noticeBoard/sendNotice.html">Notice</a></li>
+                            <li><a href="../noticeBoard/noticeBoard.html">Notice Board</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_section">
+
+                <ul class="nav side-menu">
+                    <li><h3>Organization</h3>
+                        <a><i class="fa fa-laptop"></i>Our Employees Data<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="../organization/dashEmp.html">Employee Dashboard</a></li>
+                            <li><a href="../organization/createEmp.html">Add Employee</a></li>
+                            <li><a href="../organization/empHistory.html">Employee History</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /sidebar menu -->
+
+        <!-- /menu footer buttons -->
+        <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="../../src/store/Logout.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- /menu footer buttons -->
+    </div>
+</div>
+
+<!-- top navigation -->
+<div class="top_nav">
+    <div class="nav_menu">
+        <nav>
+            <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="../../resource/images/uct.jpg" width="30px" height="30px" style="margin-right: 2px;border-radius: 30px;" alt="">Uniconverge Tech
+                        <span class=" fa fa-angle-down"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                        <li><a href="javascript:;"> Profile</a></li>
+                        <li><a href="../../src/store/Logout.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-calendar"></i>
+                        <span class="badge bg-green"></span>
+                    </a>
+                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+
+
+                        <li>
+                            <a>
+                                <span class="image"><img src="../../resource/images/img.png"  alt="Profile Image" /></span>
+                                <span>
+                                  <span>Uniconverge Tech</span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <div class="text-center">
+                                <a href="../liveEvent/liveEvent.html">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- /top navigation -->
+
+        <!-- /side and top bar include -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="main-content">
+                <!-- Header -->
+                <div class="header">
+                    <h1>Human Resource Management System</h1>
+                </div>
+            </div>
+            <div class="container" style="width: 400px;background-color: #ccc;margin-top: 50px;border-radius: 40px;">
+                <h2 style="text-align: center;">Insert Data</h2>
+                <form id="dataForm">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                    <label for="department">Department:</label>
+                    <input type="text" id="department" name="department"
+                        required>
+                    <label for="designation">Designation:</label>
+                    <input type="text" id="designation" name="designation"
+                        required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="number">Number:</label>
+                    <input type="text" id="number" name="number" required>
+                    <label for="url">URL:</label>
+                    <input type="url" id="url" name="url" required>
+
+                    <label for="occupation">Occupation:</label>
+                    <input type="text" id="occupation" name="occupation"
+                        required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"
+                        required>
+                    <label for="rpassword">Repeat Password:</label>
+                    <input type="password" id="rpassword" name="rpassword"
+                        required>
+                    <label for="telephone">Telephone:</label>
+                    <input type="text" id="telephone" name="telephone" required>
+                    <label for="detail">Detail:</label>
+                    <textarea id="detail" name="detail" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+             
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content include -->
+        <div class="footer" style="position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #e0e3ea;
+        padding-top: 25px;">
+        
+            <div class="pull-right">
+                Human Resource Management System by <a href="#">Uniconverge Tech</a>
+            </div>
+    <div class="clearfix"></div>
+</div>
+        <!-- /footer content include -->
+    </div>
+</div>
+<script>
+    document.getElementById('dataForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const data = {
+                    email: document.getElementById('email').value,
+                    firstname: document.getElementById('firstname').value,
+                    lastname: document.getElementById('lastname').value,
+                    department: document.getElementById('department').value,
+                    designation: document.getElementById('designation').value,
+                    number: document.getElementById('number').value,
+                    url: document.getElementById('url').value,
+                    occupation: document.getElementById('occupation').value,
+                    password: document.getElementById('password').value,
+                    rpassword: document.getElementById('rpassword').value,
+                    telephone: document.getElementById('telephone').value,
+                    detail: document.getElementById('detail').value
+                };
+
+                fetch('https://jhu9w2oz19.execute-api.ap-south-1.amazonaws.com/hrms/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result);
+                    alert('Data inserted successfully');
+                    // Optionally, you can redirect the user or perform other actions after successful insertion
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert('Error inserting data');
+                });
+            });
+
+
+</script>
+<!-- jQuery -->
+<script src="../../resource/js/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../../resource/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../../resource/js/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../../resource/js/nprogress.js"></script>
+<!-- validator -->
+<script src="../../resource/js/validator.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="../../resource/js/custom.min.js"></script>
+<!--<script type="text/javascript" src="../../resource/js/script.js"></script>-->
+
+</body>
+</html>
+
