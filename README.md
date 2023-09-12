@@ -14,7 +14,7 @@ Overall, the objective of an HR Management System is to enhance HR efficiency, i
 
 The primary key features design of an HR Management System include:
 
-[*1.*]()	[***Automation***](): HR systems automate repetitive tasks such as payroll processing, leave management, attendance tracking, and benefits administration. This reduces manual errors and frees up HR staff to focus on more strategic tasks.
+[*1.*]()	[***Automation***] (): HR systems automate repetitive tasks such as payroll processing, leave management, attendance tracking, and benefits administration. This reduces manual errors and frees up HR staff to focus on more strategic tasks.
 
 [*2.*]()	***Recruitment and Onboarding***: The system assists in the recruitment process by posting job openings, receiving applications, managing candidate information, and facilitating onboarding processes for new hires.
 
