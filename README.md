@@ -4,13 +4,13 @@
 
 ## [HRMS - HR Management System]()
 
-[**The Human Resource Management System (HRMS)**]() aims to manage employee’s information. The objective of a Human Resources (HR) Management System is to streamline and optimize various HR-related processes within an organization. It is a software solution that helps HR departments manage their tasks more efficiently, automate routine processes, and improve overall HR operations. stems provide a centralized repository for employee information, 
+[The Human Resource Management System (HRMS)]() aims to manage employee’s information. The objective of a Human Resources (HR) Management System is to streamline and optimize various HR-related processes within an organization. It is a software solution that helps HR departments manage their tasks more efficiently, automate routine processes, and improve overall HR operations. stems provide a centralized repository for employee information, 
 
 Overall, the objective of an HR Management System is to enhance HR efficiency, improve employee experiences, support compliance with regulations, and contribute to the organization's overall success by managing human capital effectively.
 
 
 
-The [Human Resource Management System (HRMS)]() aims to manage employee’s information. HRMS is the most important because it provides systematic and accurate information about the employees of the organization. 
+[The Human Resource Management System (HRMS)]() aims to manage employee’s information. HRMS is the most important because it provides systematic and accurate information about the employees of the organization. 
 
 The primary key features design of an HR Management System include:
 
