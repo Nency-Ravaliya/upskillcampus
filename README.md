@@ -1,6 +1,6 @@
 # Upskillcampus
 
-![Uploading image.png…]()
+![image](https://github.com/Nency-Ravaliya/upskillcampus/assets/117109265/c4d2e3b8-78d5-4221-9da2-debda83fe325)
 
 # Uniconverge Technologies
 
